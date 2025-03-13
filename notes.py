@@ -54,6 +54,9 @@ print(calcRowLC(data)) """
 
 temperatures = ["Label", 32, 50, 77, 104]
 
-temps = (int, temperatures)
-map(lambda temps: (temps-32)*(5%9), temperatures)
-print(list(temps))
+temp2 = map(int,temperatures)
+
+temps = map(lambda x:(x-32)*(5/9),temp2)
+rounded_temps = map(lambda x: int(x) + (1 if x - int(x) > 0 else 0), temps)
+
+print(list(rounded_temps))

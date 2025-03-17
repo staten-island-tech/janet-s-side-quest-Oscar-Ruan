@@ -52,8 +52,6 @@ print(doubled) """
 
 print(calcRowLC(data)) """
 
-#Ask Whalen to help me with the code that is broken
-
 temperatures = ["Label", 32, 50, 77, 104]
 
 temp2 = map(int,temperatures)

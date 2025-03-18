@@ -15,14 +15,16 @@ rental_request = {
     "Avengers": 2
 }
 
+z = 0
+a = 0
+idk = {}
 
 for i, values in rental_request.items():
-    for x, value in movie_store.items():
-        if value["stock"] == 0:
-            print(f"Movie {x} is out of stock.")
-            
-        
+    z = z + values
+    if (movie_store[i["stock"]]) == 0:
+        idk.append(movie_store[i])
+    if (movie_store[i["stock"]]) >=0:
+        a = movie_store["price"]*values
 
-""" for x, value in movie_store.items():
-    for i in value:
-        print(f"{value["stock"]}") """
+print(a)
+print(idk)

@@ -18,18 +18,18 @@ print(doubled_numbers) """
 
 print(list(doubled_numbers)) """
 
-""" data = [
+data = [
     ["Store Name", "Day 1", "Day 2", "Day 3"],
     ["Store A", 5000, 7000, 6500],
     ["Store B", 8000, 6000, 7500]
-] """
+]
 
-""" for row in data[1:]:
-    print(row) """
+for row in data[1:]:
+    print(row)
 
 #data[1:] removes the first row
 
-""" def calcRow(data):
+def calcRow(data):
     row_totals={}
 
     for row in data[1:]:
@@ -40,7 +40,7 @@ print(list(doubled_numbers)) """
     return row_totals
 
 totals = calcRow(data)
-print(totals) """
+print(totals)
 
 """ numbers = [1, 2, 3, 4, 5]
 doubled = [num*2 for num in numbers]
@@ -52,11 +52,11 @@ print(doubled) """
 
 print(calcRowLC(data)) """
 
-temperatures = ["Label", 32, 50, 77, 104]
+""" temperatures = ["Label", 32, 50, 77, 104]
 
 temp2 = map(int,temperatures)
 
 temps = map(lambda x:(x-32)*(5/9),temp2)
 rounded_temps = map(lambda x: int(x) + (1 if x - int(x) > 0 else 0), temps)
 
-print(list(rounded_temps))
+print(list(rounded_temps)) """

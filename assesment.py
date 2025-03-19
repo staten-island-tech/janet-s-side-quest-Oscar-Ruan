@@ -15,16 +15,21 @@ rental_request = {
     "Avengers": 2
 }
 
-z = 0
-a = 0
-idk = {}
+total_movies = 0
+total_cost = 0
+
 
 for i, values in rental_request.items():
-    z = z + values
-    if (movie_store[i["stock"]]) == 0:
-        idk.append(movie_store[i])
-    if (movie_store[i["stock"]]) >=0:
-        a = movie_store["price"]*values
+    total_movies = total_movies + values
+    if movie_store[i]['stock'] == 0:
+        print(f"Movie {i} is out of stock.")
+    elif movie_store[i]['stock'] >= 1:
+        total_cost = total_cost + ((movie_store[i]['price'])*(values))
+    if movie_store[i]['genre'] == "Horror":
+        total_cost = total_cost - 2
+        print("Applying $2 discount for renting a Horror movie.")
+if total_movies >= 3:
+    total_cost = total_cost*0.95
+    print("Applying 5% discount or renting 3 or more movies.")
 
-print(a)
-print(idk)
+print(total_cost)

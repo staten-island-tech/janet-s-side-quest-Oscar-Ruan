@@ -52,4 +52,4 @@ def calcRowLC(data):
 
 print(calcRowLC(data))
 
-temperatures = ["Label", 32, 50, 77, 104]
+

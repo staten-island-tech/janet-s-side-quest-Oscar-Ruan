@@ -48,9 +48,18 @@ rental_request = {
     "model": "Toyota Corolla",
     "days": 8}
 
+idk = []
+total_cost = 0
+
+
 if car_rental[rental_request["model"]]["available"] == False:
     x = car_rental[rental_request["model"]]["category"]
 
 for i,items in car_rental.items():
-    if x == car_rental["category"]:
-        print()
+    if items['category'] == x and items['available'] == True:
+        idk.append(i)
+
+
+
+if rental_request['days'] > 7:
+    total_cost = total_cost*0.85
